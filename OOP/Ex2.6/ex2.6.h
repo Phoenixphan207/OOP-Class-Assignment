@@ -17,9 +17,9 @@ public:
     void set_size(int a ) ;
     int get_size();
 
-    void set_ele(int a);
-    int get_ele(int a);
+    void set_ele(int b, int position);
+    int get_ele(int position);
 
-    int find(int a);
+    int find(int x);
     void sort(char option);
 };
