@@ -7,13 +7,14 @@ using namespace std;
 
 class Array{
 private:
-    int a[MAX_VAL] = {0};
-    int length;
+    int *data;
+    int n;
 public:
     Array();
-    Array(int n);
-    Array(int arr[] , int n);
-    Array(const Array& a1);
+    Array(int size);
+    Array(const int a[], int length);
+    Array(const Array& a);
 
-    ~Array() = default;
+    ~Array();
+    void xuat();
 };
