@@ -10,10 +10,11 @@ private:
     int num;
     int denom;
     static int count;
-public: 
+public:     
     Fraction();
     Fraction(int a , int b);
     Fraction(int d);
     Fraction(const string& s);
     Fraction(const Fraction &a);
+    static void print_number(); 
 };
