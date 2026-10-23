@@ -40,3 +40,7 @@ Fraction::Fraction(const Fraction& a) {
     denom = a.denom;
     count ++;
 }
+
+void Fraction::print_number() {
+    cout << "Total: " << count;
+}
