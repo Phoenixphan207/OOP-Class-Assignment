@@ -4,16 +4,16 @@ using namespace std;
 
 void Create()
 {
-    Object obj1(5);  // biến cục bộ hàm Create
-    Object obj2;     // biến cục bộ hàm Create
+    Object obj1(5);  
+    Object obj2;     
 }
 
-Object objGlobal;     // biến toàn cục
+Object objGlobal;     
 
 int main()
 {
-    Object obj1;      // biến cục bộ hàm main
-    Create();         // gọi hàm Create()
-    Object obj2(3);   // biến cục bộ hàm main
+    Object obj1;      
+    Create();         
+    Object obj2(3);   
     return 0;
 }
