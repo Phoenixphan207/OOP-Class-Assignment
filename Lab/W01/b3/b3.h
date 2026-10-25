@@ -10,6 +10,9 @@ private:
     int gio;
     int phut;
     int giay;
+
+    void ChuanHoa(long long tongGiay);
+
 public: 
     ThoiGian();
     ThoiGian(int a);
