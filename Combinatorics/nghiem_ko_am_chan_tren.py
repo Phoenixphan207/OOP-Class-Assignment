@@ -1,17 +1,12 @@
 import math
 m, n, c = [int(x) for x in input().split()]
 
-d1 = math.comb(n+m-1 , n)
+def nKm(n , m):
+    return math.comb(n + m - 1 , n)
 
-k = n // c 
+k = n // (c+1)
+ket_qua = 0
+for i in range(0 , k + 1):
+    ket_qua += nKm(n - i*(c+1) , m) * math.comb(m ,i) * (-1)**i
 
-
-
-
-
-    
-d2 = 0
-for i in range(1,k+1):
-    d2 += math.comb(m, i) * math.comb(n - i*c + m - 1, n - i*c) * (-1)**i
-
-print(d1 + d2)
+print(ket_qua)
