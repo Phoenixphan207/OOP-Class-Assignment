@@ -3,26 +3,20 @@ ket_qua = []
 for _ in range(T):
     n, a, b, c, p, q, r, s = map(int, input().split())
 
-    if (s < 0 or p < s or q < s or r < s or
-        p > a or p > b or
-        q > b or q > c or
-        r > a or r > c):
-        ket_qua.append(-1)
-        continue
+    p_only = p - s  
+    q_only = q - s  
+    r_only = r - s  
 
-    a1 = a - p - r + s
-    b1 = b - p - q + s
-    c1 = c - q - r + s
-    if a1 < 0 or b1 < 0 or c1 < 0:
-        ket_qua.append(-1)
-        continue
+    a_only = a - p - q + s
+    b_only = b - p - r + s
+    c_only = c - q - r + s
 
-    ans = a + b + c - p - q - r + s
+    total_union = a + b + c - p - q - r + s
 
-    if ans > n:
+    if (s < 0 or p_only < 0 or q_only < 0 or r_only < 0 or 
+        a_only < 0 or b_only < 0 or c_only < 0 or total_union > n):
         ket_qua.append(-1)
     else:
-        ket_qua.append(n - ans)
-
+        ket_qua.append(n - total_union)
 for i in ket_qua:
     print(i)
