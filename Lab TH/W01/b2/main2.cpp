@@ -18,5 +18,4 @@ int main() {
     Ngay n5("12-12-2012");
     n5.Xuat();
     cout << endl;
-
 }
